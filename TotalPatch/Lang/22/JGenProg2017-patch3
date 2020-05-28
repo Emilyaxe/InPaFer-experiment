@@ -1,0 +1,13 @@
+--- /Users/liangjingjing/WorkSpace/Data/Defects4J/projects/Lang/Lang_22_buggy//src/main/java///org/apache/commons/lang3/math/Fraction.java	2019-03-25 17:26:34.000000000 +0800
++++ /Users/liangjingjing/WorkSpace/Data/Defects4J/projects/Lang/Lang_22_buggy//src/main/java///org/apache/commons/lang3/math/Fraction.java.patched	2019-03-25 17:26:34.000000000 +0800
+@@ -242,8 +242,8 @@
+                 }
+     }
+     private static int greatestCommonDivisor(int u, int v) {
+-        if (((java.lang.Math.abs(u)) <= 1) || ((java.lang.Math.abs(v)) <= 1)) {
+-            return 1;
++        if (u > 0) {
++            u = -u;
+         }
+         if (u > 0) {
+             u = -u;
